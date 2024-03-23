@@ -10,7 +10,7 @@ const DiscoverRes = ({img, title, keywords, handleBtnClick}) => {
                     return (
                         <button 
                             className="keyword btn"
-                            id={`keyword-${id}`}
+                            key={`keyword-${id}`}
                             onClick={(keyword) => handleBtnClick(keyword)}>
                                 {keyword}
                         </button>);

@@ -4,7 +4,7 @@ Submitted by: Harshita Bhardwaj
 
 This web app: Gets random images from the NASA image API, and allows the user to ban certain keywords. If a keyword is banned the respective img should not appear
 
-Time spent: **X** hours spent in total
+Time spent: 3 hours spent in total
 
 ## Required Features
 
@@ -15,7 +15,7 @@ The following **required** functionality is completed:
 - [✅] **API calls appear random to the user**
 - [✅] **At least one image is displayed per API call**
 - [✅] **Clicking on a displayed value for one attribute adds it to a displayed ban list**
-- [ ] **Attributes on the ban list prevent further images/API results with that attribute from being displayed**
+- [✅] **Attributes on the ban list prevent further images/API results with that attribute from being displayed**
 
 The following **optional** features are implemented:
 
@@ -30,22 +30,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
-
-## Notes
-
-Describe any challenges encountered while building the app.
+<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmYxa2ZqcTg0aDNheWVtam9jZzVmcDRtN25xaHI1NTFiNmx4bjFuYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GwWt69PdwxR17j5BZ6/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2024] [Harshita Bhardwaj]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

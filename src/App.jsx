@@ -59,7 +59,7 @@ function App() {
     if (imgKeywords.length == 1) {
       imgKeywords = imgKeywords[0].trim().split(",");
       // if an empty space was added to the arr remove it
-      if (imgKeywords[-1] == "") {
+      if (imgKeywords[-1] == " ") {
         imgKeywords = [...imgKeywords.splice(0, -1)];
       }
     }
@@ -76,7 +76,7 @@ function App() {
     if (keywords.length == 1) {
       keywords = keywords[0].trim().split(",");
       // if an empty space was added to the arr remove it
-      if (keywords[-1] == "") {
+      if (keywords[-1] == " ") {
         keywords = [...keywords.splice(0, -1)];
       }
     }

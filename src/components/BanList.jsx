@@ -11,7 +11,7 @@ const BanList = ({bannedAttribues, handleRemoveBan}) => {
             {bannedAttribues ? bannedAttribues.map((attr) => {
                 return <button
                     id={`banAttr-${attr}`}
-                    className="ban-attr"
+                    className="ban-attr btn"
                     onClick={handleRemoveBan}>
                         {attr}
                     </button>;

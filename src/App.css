@@ -1,6 +1,7 @@
 #root {
   display: flex;
   flex-direction: row;
+  overflow-x: hidden;
   min-height: 93vh;
   /* overflow-y: hidden; */
 }

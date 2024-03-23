@@ -14,16 +14,15 @@ function App() {
   });
 
   const handleRemoveBan = (e) => {
-    const attrToRemove = e.target.value;
+    const attrToRemove = e.target.innerText;
     const attrIndex = bannedAttrs.indexOf(attrToRemove);
     // create a new banned attr array without the attribute to remove
     setBannedAttrs([...bannedAttrs.slice(0, attrIndex), ...bannedAttrs.slice(attrIndex + 1)]);
-
+    
   }
-
+  
   // add a new attribute to the banned list
   const handleBan = (e) => {
-    console.log(`ban: ${e.target.innerText}`)
     setBannedAttrs([...bannedAttrs, e.target.innerText]);
   }
 
@@ -51,11 +50,19 @@ function App() {
     let imgKeywords = imgJson.data[0].keywords;
     
     // regenerate the img if it has a banned keyword
-    while(inBanList(imgKeywords) || imgKeywords == undefined || imgKeywords == null) {
+    while(imgKeywords == undefined || inBanList(imgKeywords) ) {
       imgJson = await fetchImg();
       imgKeywords = imgJson.data[0].keywords;
+      // make sure the keywords are split properly
+      console.log(imgKeywords);
     }
-
+    if (imgKeywords.length == 1) {
+      imgKeywords = imgKeywords[0].trim().split(",");
+      // if an empty space was added to the arr remove it
+      if (imgKeywords[-1] == "") {
+        imgKeywords = [...imgKeywords.splice(0, -1)];
+      }
+    }
     setApiImg({
       imgSrc: imgJson.links[0].href,
       title: imgJson.data[0].title,
@@ -66,7 +73,20 @@ function App() {
   }
 
   const inBanList = (keywords) => {
+    if (keywords.length == 1) {
+      keywords = keywords[0].trim().split(",");
+      // if an empty space was added to the arr remove it
+      if (keywords[-1] == "") {
+        keywords = [...keywords.splice(0, -1)];
+      }
+    }
 
+    for(let i = 0; i < keywords.length; i++) {
+      if (bannedAttrs.indexOf(keywords[i]) !== -1) {
+        return true;
+      }
+    }
+    return false;
   }
 
   return (

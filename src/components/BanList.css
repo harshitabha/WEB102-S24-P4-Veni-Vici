@@ -1,6 +1,12 @@
 .ban-container {
     background-color: grey;
     color: white;
-    padding: 1%;
+    padding: 10px;
     text-align: center;
+    overflow-wrap: break-word;
+}
+
+.ban-attr {
+    background-color: orange;
+    margin: 1vh 0.5vw;
 }
